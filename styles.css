@@ -31,3 +31,25 @@ body {
     --color-line2: #A88E60;
     --color-line3: #7A705E;
 }
+
+/* PAGE */
+.page-container {
+    margin: 32px 16%;
+    min-width: 512px;
+}
+
+/* MAIN CONTENT */
+main {
+    margin-top: 100px;
+    padding: 64px;
+    display: block;
+    background-color: var(--color-bg1);
+    color: var(--text-color);
+    margin-bottom: 64px;
+}
+main p, main h1, main h2, main h3 {
+    padding: 8px;
+}
+main h1, main h2, main h3 {
+    color: var(--color-line2)
+}
