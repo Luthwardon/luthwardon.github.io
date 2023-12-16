@@ -2,7 +2,7 @@
 
 let header_text = `
 <header>
-    header
+    im still testing stuff
 </header>
 `;
 let footer_text = `
