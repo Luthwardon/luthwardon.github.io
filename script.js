@@ -2,7 +2,9 @@
 
 let header_text = `
 <header>
-    im still testing stuff
+    <p>
+        im still testing stuff
+    </p>
 </header>
 `;
 let footer_text = `
@@ -11,7 +13,7 @@ let footer_text = `
     <p>
         Footer and header can be changed from the script.js file
     </p><small>
-        wiki made by <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">@Glargoe</a> c:
+        wiki made by <a href="/pages/temp.html">@Glargoe</a> c:
     </small>
     <hr>
 </div>
