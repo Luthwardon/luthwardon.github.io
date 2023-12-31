@@ -49,20 +49,48 @@ h1, h2, h3 {
 .text-italic {
     font-style: italic;
 }
+.text-coloured {
+    color: var(--color-light2);
+}
 .text-serif {
     font-family: "Marcellus SC";
+}
+
+/* DESKTOP BREAKPOINT */
+@media screen and (min-width: 799px) {
+    div.page-container { width: 800px }
+    #navigator nav { padding: 8px 10%; }
+    nav a:not(:first-child) { display: inline-block !important; }
+    nav a.dropdown {
+        display: none;
+    }
+    div.page-container header h1 {
+        margin-left: 0;
+    }
+    .table-nav tr td {
+        display: table-cell;
+    }
+    table.table-nav {
+        width: 640px;
+    }
+}
+/* TINY SCREEN BREAKPOINT */
+@media screen and (max-width: 580px) {
+    /* sadly remove the important bird */
+    header i.fa-crow { display: none; }
 }
 
 /* NAV */
 nav {
     background-color: var(--color-bg1);
-    padding: 8px 128px;
+    padding: 8px;
     border-bottom: 4px solid var(--color-light1);
     font-family: "Marcellus SC";
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
+    color: var(--color-headertext1);
 }
 nav h3 {
     display: inline-block;
@@ -74,9 +102,33 @@ nav i {
 nav a {
     color: var(--color-headertext1);
     margin-right: 8px;
+    text-decoration: none;
+    font-size: 20px;
 }
+nav a:not(:first-child):not(:last-child) { display: none; }
 nav a:hover {
     color: var(--color-headertext2);
+}
+nav .dropdown {
+    float: right;
+    display: block;
+    padding: 8px 16px;
+}
+
+/* The Glargnav!!! */
+.transformnav { position: relative; }
+.transformnav nav a:not(:first-child):not(:last-child) {
+    float: none;
+    display: block;
+    text-align: left;
+}
+.transformnav nav a.dropdown {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+.transformnav nav a:nth-child(2)::before {
+    content: "・Discord "
 }
 
 /* HEADER */
@@ -86,6 +138,9 @@ header {
 header h1 {
     font-weight: normal;
     font-size: 64px;
+    margin-left: 16px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 header i {
     font-size: 48px;
@@ -93,7 +148,7 @@ header i {
 
 /* MAIN CONTENT */
 .page-container {
-    width: 800px;
+    width: 100%;
     margin-top: 128px;
 }
 main {
@@ -146,10 +201,11 @@ section p {
 /* TABLE NAV */
 .table-nav {
     margin: 0 auto;
-    width: 640px;
+    width: 70%;
 }
 .table-nav td {
     padding: 8px;
+    display: block;
 }
 .table-nav span {
     display: block;
