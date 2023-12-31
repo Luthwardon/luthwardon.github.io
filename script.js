@@ -1,11 +1,10 @@
 // PRESETS
 
-let header_text = `
-<header>
-    <p>
-        im still testing stuff
-    </p>
-</header>
+let nav_text = `
+<nav>
+    <a href="overview.html"><h3>Luthwardron Wiki</h3></a>
+    <a href=""><i class="fa-brands fa-discord"></i></a>
+</nav>
 `;
 let footer_text = `
 <footer>
@@ -16,8 +15,8 @@ let footer_text = `
 `
 
 // INSERT PRESETS
-// let header = document.getElementById("header");
-// header.innerHTML = header_text
+let nav = document.getElementById("nav");
+nav.innerHTML = header_text
 let footer = document.getElementById("footer");
 footer.innerHTML = footer_text
 

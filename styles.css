@@ -53,6 +53,32 @@ h1, h2, h3 {
     font-family: "Marcellus SC";
 }
 
+/* NAV */
+nav {
+    background-color: var(--color-bg1);
+    padding: 8px 128px;
+    border-bottom: 4px solid var(--color-light1);
+    font-family: "Marcellus SC";
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+nav h3 {
+    display: inline-block;
+    font-size: 32px;
+}
+nav i {
+    font-size: 24px;
+}
+nav a {
+    color: var(--color-headertext1);
+    margin-right: 8px;
+}
+nav a:hover {
+    color: var(--color-headertext2);
+}
+
 /* HEADER */
 header {
     color: var(--color-headertext1);
