@@ -46,8 +46,8 @@ h1, h2, h3 {
     font-weight: 200;
     font-family: 'Segoe UI', sans-serif;
 }
-.text-bold {
-    font-weight: bold;
+.text-italic {
+    font-style: italic;
 }
 .text-serif {
     font-family: "Marcellus SC";
@@ -111,12 +111,16 @@ main a:hover {
 }
 
 /* BREAKERS */
-.breaker {
+hr {
     text-align: center;
     margin: 8px;
+    border: none;
 }
-.breaker::before {
+.break1::before {
     content: "━━━・✦・━━━";
+}
+.break2::before {
+    content: "━━━";
 }
 .breaker-header {
     border-top: 2px solid var(--color-light1);
