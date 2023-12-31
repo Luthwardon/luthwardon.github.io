@@ -64,20 +64,11 @@ h1, h2, h3 {
     nav a.dropdown {
         display: none;
     }
-    div.page-container header h1 {
-        margin-left: 0;
-    }
-    .table-nav tr td {
-        display: table-cell;
-    }
-    table.table-nav {
-        width: 640px;
-    }
-}
-/* TINY SCREEN BREAKPOINT */
-@media screen and (max-width: 580px) {
-    /* sadly remove the important bird */
-    header i.fa-crow { display: none; }
+    div.page-container header h1 { margin-left: 0; }
+    .table-nav tr td { display: table-cell; }
+    table.table-nav { width: 640px; }
+    header h1.text-serif { font-size: 64px; }
+    header h1 i { font-size: 48px; }
 }
 
 /* NAV */
@@ -137,13 +128,13 @@ header {
 }
 header h1 {
     font-weight: normal;
-    font-size: 64px;
     margin-left: 16px;
     white-space: nowrap;
     overflow: hidden;
+    font-size: 8vw;
 }
 header i {
-    font-size: 48px;
+    font-size: 6vw;
 }
 
 /* MAIN CONTENT */
