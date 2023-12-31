@@ -15,8 +15,8 @@ let footer_text = `
 `
 
 // INSERT PRESETS
-let nav = document.getElementById("nav");
-nav.innerHTML = header_text
+let nav = document.getElementById("navigator");
+nav.innerHTML = nav_text
 let footer = document.getElementById("footer");
 footer.innerHTML = footer_text
 
