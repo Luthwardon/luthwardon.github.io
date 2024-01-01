@@ -2,11 +2,11 @@
 
 let nav_text = `
 <nav>
-    <a href="overview.html"><h3>Luthwardron Wiki</h3></a>
-    <a href=""><i class="fa-brands fa-discord"></i></a>
-    <a href="">・Hall of Contributions</a>
-    <a href="">・Plot Map</a>
-    <a href="">・Jots</a>
+    <a href="overview.html" title="Back to the home page."><h3>Luthwardron Wiki</h3></a>
+    <a href="" title="Join the Luthwardron Discord!"><i class="fa-brands fa-discord"></i></a>
+    <a href="" title="Browse wiki pages.">・Pages</a>
+    <a href="" title="View an interactive map of the plot.">・Map</a>
+    <a href="hall_of_contributions.html" title="Thank you to those who helped create the plot!">・Hall of Contributions</a>
     <a href="javascript:void(0);" onclick="toggleNav()" class="dropdown">
         <i class="fa-solid fa-bars"></i>
     </a>
@@ -28,9 +28,9 @@ footer.innerHTML = footer_text
 
 // RESPONSIVE NAV
 function toggleNav() {
-    if (nav.className === "glargnav") {
+    if (nav.className === "") {
       nav.className += " transformnav";
     } else {
-      nav.className = "glargnav";
+      nav.className = "";
     }
   }
