@@ -15,6 +15,8 @@ let footer_text = `
 <footer>
     <small>
         wiki made by <a href="temp.html">@Glargoe</a> c:
+    <br>
+        working on a proper page nav :,)
     </small>
 </footer>
 `
@@ -28,8 +30,8 @@ footer.innerHTML = footer_text
 // RESPONSIVE NAV
 function toggleNav() {
     if (nav.className === "") {
-      nav.className += " transformnav";
+        nav.className += " transformnav";
     } else {
-      nav.className = "";
+        nav.className = "";
     }
-  }
+}

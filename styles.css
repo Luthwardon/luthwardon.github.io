@@ -290,6 +290,7 @@ section h3::after {
     transform: translate(-50%, -50%);
     font-size: 32px;
     white-space: nowrap;
+    color: var(--color-headertext1);
 }
 
 /* TIMELINE */
