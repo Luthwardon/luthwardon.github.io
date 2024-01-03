@@ -56,6 +56,9 @@ h1, h2, h3 {
 .text-serif {
     font-family: "Marcellus SC", serif;;
 }
+.disabled {
+    opacity: 0.4;
+}
 
 /* DESKTOP BREAKPOINT */
 @media screen and (min-width: 799px) {
