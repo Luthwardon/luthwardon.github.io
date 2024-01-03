@@ -20,7 +20,7 @@ h1, h2, h3 {
 /* PALETTE */
 :root {
     --color-maintext:#B4B2B0;
-    --color-linktext: #867858;
+    --color-linktext: #9c8652;
     --color-bg1: #000;
     --color-bg2: #272624;
     --color-bg3: #373430;
@@ -54,7 +54,7 @@ h1, h2, h3 {
     color: var(--color-light2);
 }
 .text-serif {
-    font-family: "Marcellus SC";
+    font-family: "Marcellus SC", serif;;
 }
 
 /* DESKTOP BREAKPOINT */
@@ -90,7 +90,7 @@ nav {
     background-color: var(--color-bg1);
     padding: 8px;
     border-bottom: 4px solid var(--color-light1);
-    font-family: "Marcellus SC";
+    font-family: "Marcellus SC", serif;;
     position: fixed;
     top: 0;
     width: 100%;
@@ -191,7 +191,7 @@ hr {
     border-bottom: 2px solid var(--color-light1);
     width: 80%;
     font-weight: normal;
-    font-family: "Marcellus SC";
+    font-family: "Marcellus SC", serif;;
     text-align: center;
     margin: 24px auto 8px;
 }
@@ -229,19 +229,67 @@ section {
     align-items: center;
     padding: 32px 64px;
 }
-section p {
+section p, section h1, section h2, section h3, section li, section small {
     margin-bottom: 10px;
+}
+section p, section li {
     font-size: 14px;
 }
+section li {
+    margin-left: 24px;
+}
+section h3 {
+    margin-left: 24px;
+}
+section h3::before {
+    content: "";
+    border: 2px solid;
+    border-color: inherit;
+    position: absolute;
+    left: 0;
+    margin-top: 10px;
+    width: 16px;
+}
+section h3::after {
+    content: "";
+    border: 2px solid;
+    border-color: inherit;
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+    width: 16px;
+}
 
-/* WIKI HOME */
-.sec-wikihome h1 {
-    font-size: 32px;
-    margin-bottom: 16px;
+/* BOXES */
+.box1 {
+    border-left: 4px solid var(--color-light1);
+    border-right: 4px solid var(--color-light1);
+    background-color: var(--color-bg2);
+    width: 75%;
+    margin: 0 auto;
+    padding: 16px 32px;
 }
 
 /* WIKI ENTRY */
 
+/* SPLITS */
+
+/* PAGE BANNER */
+.sec-banner {
+    padding: 0;
+}
+.sec-banner img {
+    width: 100%;
+    height: 200px;
+}
+.sec-banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    white-space: nowrap;
+}
 
 /* TIMELINE */
 .timeline {

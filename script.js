@@ -4,7 +4,6 @@ let nav_text = `
 <nav>
     <a href="overview.html" title="Back to the home page."><h3>Luthwardron Wiki</h3></a>
     <a href="" title="Join the Luthwardron Discord!"><i class="fa-brands fa-discord"></i></a>
-    <a href="" title="Browse wiki pages.">・Pages</a>
     <a href="" title="View an interactive map of the plot.">・Map</a>
     <a href="hall_of_contributions.html" title="Thank you to those who helped create the plot!">・Hall of Contributions</a>
     <a href="javascript:void(0);" onclick="toggleNav()" class="dropdown">
