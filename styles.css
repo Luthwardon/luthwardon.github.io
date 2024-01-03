@@ -281,6 +281,7 @@ section h3::after {
 .sec-banner img {
     width: 100%;
     height: 200px;
+    object-fit: cover;
 }
 .sec-banner h1 {
     position: absolute;
