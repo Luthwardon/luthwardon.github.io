@@ -30,7 +30,7 @@ footer.innerHTML = footer_text
 // RESPONSIVE NAV
 function toggleNav() {
     if (nav.className === "") {
-        nav.className += " transformnav";
+        nav.className += "transformnav";
     } else {
         nav.className = "";
     }

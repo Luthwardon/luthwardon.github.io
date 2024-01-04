@@ -87,6 +87,13 @@ h1, h2, h3 {
     }
     .timeline-box:nth-child(odd)::before { left: 100%; }
 }
+/* TINY SCREEN BREAKPOINT */
+@media screen and (max-width: 499px) {
+    div.split.split > *{
+        float: none;
+        max-width: 100%;
+    }
+}
 
 /* NAV */
 nav {
@@ -263,19 +270,28 @@ section h3::after {
     width: 16px;
 }
 
-/* BOXES */
+/* BOXE STYLES */
 .box1 {
     border-left: 4px solid var(--color-light1);
     border-right: 4px solid var(--color-light1);
     background-color: var(--color-bg2);
-    width: 75%;
-    margin: 0 auto;
     padding: 16px 32px;
+    margin-bottom: 10px;
 }
 
-/* WIKI ENTRY */
-
 /* SPLITS */
+.split { display: inline-block; }
+.split > :nth-child(1) { float: left; }
+.split > :nth-child(2) { float: right; }
+.split.rr > :nth-child(1) { max-width: 70%; }
+.split.rr > :nth-child(2) { max-width: 30%; }
+.split.r > :nth-child(1) { max-width: 60%; }
+.split.r > :nth-child(2) { max-width: 40%; }
+.split.m > * { max-width: 50%; }
+.split.l > :nth-child(1) { max-width: 40%; }
+.split.l > :nth-child(2) { max-width: 60%; }
+.split.ll > :nth-child(1) { max-width: 30%; }
+.split.ll > :nth-child(2) { max-width: 70%; }
 
 /* PAGE BANNER */
 .sec-banner {
