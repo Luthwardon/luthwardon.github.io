@@ -1,7 +1,7 @@
 // PRESETS
 
 let nav_text = `
-<nav>
+<nav class="nav-top">
     <a href="overview.html" title="Back to the home page."><h3>Luthwardron Wiki</h3></a>
     <a class="disabled" href="" title="Join the Luthwardron Discord!"><i class="fa-brands fa-discord"></i></a>
     <a class="disabled" href="" title="View an interactive map of the plot.">・Map</a>

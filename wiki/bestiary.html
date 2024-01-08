@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luthwardron Wiki - Bestiary</title>
+    <link rel="icon" href="/assets/favicon.png" type="image/x-icon">
+    <link href="/styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9b77118d0d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="" id="navigator">
+    </div>
+    <div class="page-container center-elem">
+        <header>
+            <h1 class="text-serif">Luthwardron Wiki <i class="fa-solid fa-crow"></i></h1>
+        </header>
+        <main>
+
+            <section>
+                <h2 class="breaker-header">Bestiary</h2>
+                <small class="text-coloured">
+                    <a href="overview.html">Wiki</a> > 
+                    Bestiary
+                </small><br><br>
+                <h3 class="center-text">Work in Progress...</h3>
+                <p>
+                    For creatures with sentience, see
+                    <a href="race_info.html">Races</a>
+                </p>
+                <nav class="nav-bestiary">
+                    <button onclick="toggleBestiary('beast', this)"
+                    title="All animals, such as mammals and fish">
+                        <i class="fa-solid fa-paw"></i>
+                        <p>Beast</p>
+                    </button>
+                    <button onclick="toggleBestiary('humanoid', this)"
+                    title="Bipeds with comparably higher intelligence, such as ogres and goblins.">
+                        <i class="fa-solid fa-person"></i>
+                        <p>Humanoid</p>
+                    </button>
+                    <button onclick="toggleBestiary('giant', this)"
+                    title="Giant creatures, usually with magical properties, such as dragons.">
+                        <i class="fa-solid fa-dragon"></i>
+                        <p>Giant</p>
+                    </button>
+                    <button onclick="toggleBestiary('construct', this)">
+                        <i class="fa-solid fa-robot"
+                        title="Conjurations and automatons, such as golems."></i>
+                        <p>Construct</p>
+                    </button>
+                    <button onclick="toggleBestiary('plantlike', this)"
+                    title="Lower-intelligence lifeforms or creatures with ties to plants, such as slimes.">
+                        <i class="fa-solid fa-seedling"></i>
+                        <p>Plant-like</p>
+                    </button>
+                    <button onclick="toggleBestiary('undead', this)"
+                    title="Reanimated creatures such as ghosts, skeletons, and spirits.">
+                        <i class="fa-solid fa-ghost"></i>
+                        <p>Undead</p>
+                    </button>
+                    <button onclick="toggleBestiary('horror', this)"
+                    title="Unnatural creatures, and those who do not fit into other categories.">
+                        <i class="fa-solid fa-spaghetti-monster-flying"></i>
+                        <p>Horror</p>
+                    </button>
+                </nav>
+            </section>
+
+            <section class="sec-bestiary-list">
+                <button class="beast" onclick="toggleBestiaryEntry(this)">
+                    Air bison
+                </button><button class="beast" onclick="toggleBestiaryEntry(this)">
+                    Giant frog
+                </button><button class="giant" onclick="toggleBestiaryEntry(this)">
+                    Giant serpent
+                </button><button class="giant" onclick="toggleBestiaryEntry(this)">
+                    Great snapper
+                </button><button class="humanoid" onclick="toggleBestiaryEntry(this)">
+                    Lich
+                </button><button class="humanoid" onclick="toggleBestiaryEntry(this)">
+                    Rat-man
+                </button><button class="plantlike" onclick="toggleBestiaryEntry(this)">
+                    Slime
+                </button><button class="beast" onclick="toggleBestiaryEntry(this)">
+                    Sorcerer bee
+                </button><button class="beast" onclick="toggleBestiaryEntry(this)">
+                    Unicorn
+                </button>
+            </section>
+
+            <section class="split l">
+                <img src="/images/temp.jpg">
+                <div>
+                    <h2 class="breaker-header">Creature name</h2>
+                    <small class="text-coloured">Classification</small>
+                    <p>
+                        Description
+                    </p>
+                </div>
+            </section>
+
+            <div id="footer"></div>
+        </main>
+    </div>
+</body>
+<script src="/script.js"></script>
+<script>
+    // BESTIARY NAV
+    function toggleBestiary(creatureType, button) {
+        let elems = document.getElementsByClassName(creatureType);
+        if (elems[0].style.display === "none") {
+            for (let i = 0; i < elems.length; i++) {
+                elems[i].style.display = "block";
+            }
+            button.className = "";
+        } else {
+            for (let i = 0; i < elems.length; i++) {
+                elems[i].style.display = "none";
+            }
+            button.className = "clicked"
+        }
+    }
+    
+    // BESTIARY ENTRIES
+    function toggleBestiaryEntry(button) {
+        console.log("clicked!!")
+        if (button.classList.contains("clicked")) {
+            button.className = button.className.split(" ").shift();
+        } else  {
+            let elems = document.getElementsByClassName("clicked")
+            for (let i = 0; i < elems.length; i++) {
+                elems[i].className = elems[i].className.split(" ").shift();
+            }
+            button.className += " clicked";
+        }
+    }
+</script>
+</html>

@@ -63,9 +63,9 @@ h1, h2, h3 {
 /* DESKTOP BREAKPOINT */
 @media screen and (min-width: 799px) {
     div.page-container { width: 800px }
-    #navigator nav { padding: 8px 10%; }
-    nav a:not(:first-child) { display: inline-block !important; }
-    nav a.dropdown {
+    #navigator .nav-top { padding: 8px 10%; }
+    .nav-top a:not(:first-child) { display: inline-block !important; }
+    .nav-top a.dropdown {
         display: none;
     }
     div.page-container header h1 { margin-left: 0; }
@@ -89,14 +89,14 @@ h1, h2, h3 {
 }
 /* TINY SCREEN BREAKPOINT */
 @media screen and (max-width: 499px) {
-    div.split.split > *{
+    .split.split.split.split > *{
         float: none;
         max-width: 100%;
     }
 }
 
-/* NAV */
-nav {
+/* MAIN NAV */
+.nav-top {
     background-color: var(--color-bg1);
     padding: 8px;
     border-bottom: 4px solid var(--color-light1);
@@ -107,25 +107,25 @@ nav {
     z-index: 2;
     color: var(--color-headertext1);
 }
-nav h3 {
+.nav-top h3 {
     display: inline-block;
     font-size: 32px;
 }
-nav i {
+.nav-top i {
     font-size: 24px;
 }
-nav a {
+.nav-top a {
     color: var(--color-headertext1);
     margin-right: 8px;
     text-decoration: none;
     font-size: 20px;
     transition: 0.2s;
 }
-nav a:not(:first-child):not(:last-child) { display: none; }
-nav a:hover {
+.nav-top a:not(:first-child):not(:last-child) { display: none; }
+.nav-top a:hover {
     color: var(--color-headertext2);
 }
-nav .dropdown {
+.nav-top .dropdown {
     float: right;
     display: block;
     padding: 8px 16px;
@@ -133,17 +133,17 @@ nav .dropdown {
 
 /* The Glargnav!!! */
 .transformnav { position: relative; }
-.transformnav nav a:not(:first-child):not(:last-child) {
+.transformnav .nav-top a:not(:first-child):not(:last-child) {
     float: none;
     display: block;
     text-align: left;
 }
-.transformnav nav a.dropdown {
+.transformnav .nav-top a.dropdown {
     position: absolute;
     right: 8px;
     top: 8px;
 }
-.transformnav nav a:nth-child(2)::before {
+.transformnav .nav-top a:nth-child(2)::before {
     content: "・Discord "
 }
 
@@ -206,7 +206,7 @@ hr {
     margin: 24px auto 8px;
 }
 
-/* TABLE NAV */
+/* TABLE .nav-top */
 .table-nav {
     margin: 0 auto;
     width: 70%;
@@ -270,7 +270,7 @@ section h3::after {
     width: 16px;
 }
 
-/* BOXE STYLES */
+/* BOX STYLES */
 .box1 {
     border-left: 4px solid var(--color-light1);
     border-right: 4px solid var(--color-light1);
@@ -371,6 +371,55 @@ section h3::after {
 }
 .timeline i {
     font-size: 20px;
+}
+
+/* BESTIARY NAV */
+.nav-bestiary {
+    width: 100%;
+    overflow: auto;
+    white-space: nowrap;
+}
+.nav-bestiary button {
+    width: 80px;
+    height: 80px;
+    padding: 8px 0;
+    margin-right: 8px;
+    background-color: var(--color-bg2);
+    border: 4px solid var(--color-light1);
+    color: var(--color-maintext);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.nav-bestiary button i {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+.nav-bestiary button:hover {
+    color: var(--color-linktext);
+    border-color: var(--color-linktext);
+    text-decoration: none;
+}
+.nav-bestiary button.clicked { color: var(--color-bg3); }
+
+/* BESTIARY LIST */
+.sec-bestiary-list {
+    padding: 0 64px 32px;
+    max-height: 256px;
+    overflow: auto;
+}
+.sec-bestiary-list button {
+    background-color: var(--color-bg1);
+    color: var(--color-maintext);
+    border: none;
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+.sec-bestiary-list button.clicked {
+    background-color: var(--color-bg2);
 }
 
 /* FOOTER */ 
