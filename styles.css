@@ -11,6 +11,7 @@ body {
     height: 100%;
     background-image: url("/assets/background.png");
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
 }
 h1, h2, h3 {
@@ -58,6 +59,10 @@ h1, h2, h3 {
 }
 .disabled {
     opacity: 0.4;
+}
+.small-left-pad {
+    padding-left: 8px;
+    box-sizing: border-box;
 }
 
 /* DESKTOP BREAKPOINT */
@@ -203,7 +208,7 @@ hr {
     font-weight: normal;
     font-family: "Marcellus SC", serif;;
     text-align: center;
-    margin: 24px auto 8px;
+    margin: 0 auto 8px;
 }
 
 /* TABLE .nav-top */
@@ -283,15 +288,15 @@ section h3::after {
 .split { display: inline-block; }
 .split > :nth-child(1) { float: left; }
 .split > :nth-child(2) { float: right; }
-.split.rr > :nth-child(1) { max-width: 70%; }
-.split.rr > :nth-child(2) { max-width: 30%; }
-.split.r > :nth-child(1) { max-width: 60%; }
-.split.r > :nth-child(2) { max-width: 40%; }
-.split.m > * { max-width: 50%; }
-.split.l > :nth-child(1) { max-width: 40%; }
-.split.l > :nth-child(2) { max-width: 60%; }
-.split.ll > :nth-child(1) { max-width: 30%; }
-.split.ll > :nth-child(2) { max-width: 70%; }
+.split.rr > :nth-child(1) { width: 70%; }
+.split.rr > :nth-child(2) { width: 30%; }
+.split.r > :nth-child(1) { width: 60%; }
+.split.r > :nth-child(2) { width: 40%; }
+.split.m > * { width: 50%; }
+.split.l > :nth-child(1) { width: 40%; }
+.split.l > :nth-child(2) { width: 60%; }
+.split.ll > :nth-child(1) { width: 30%; }
+.split.ll > :nth-child(2) { width: 70%; }
 
 /* PAGE BANNER */
 .sec-banner {
@@ -404,8 +409,10 @@ section h3::after {
 /* BESTIARY LIST */
 .sec-bestiary-list {
     padding: 0 64px 32px;
-    max-height: 256px;
+    height: 256px;
     overflow: auto;
+    border-right: 4px solid var(--color-light1);
+    border-left: 4px solid var(--color-light1);
 }
 .sec-bestiary-list button {
     background-color: var(--color-bg1);
@@ -418,8 +425,15 @@ section h3::after {
     width: 100%;
     text-align: left;
 }
-.sec-bestiary-list button.clicked {
+.sec-bestiary-list button.clicked, .sec-bestiary-list button:hover {
     background-color: var(--color-bg2);
+}
+.sec-bestiary-list button:hover {
+    text-decoration: underline;
+}
+.sec-bestiary-list button i {
+    float: right;
+    margin: 0 4px;
 }
 
 /* FOOTER */ 
