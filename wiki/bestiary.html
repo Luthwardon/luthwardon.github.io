@@ -79,7 +79,7 @@
                 </button><button class="beast" onclick="toggleBestiaryEntry('sorcererbee', this)">
                     Sorcerer bee <i class="fa-solid fa-mosquito"></i><i class="fa-solid fa-wand-sparkles"></i>
                 </button><button class="beast" onclick="toggleBestiaryEntry('unicorn', this)">
-                    Unicorn
+                    Unicorn <i class="fa-solid fa-cow"></i>
                 </button>
             </section>
 
@@ -244,7 +244,7 @@
         let creatureData = entryData[creature];
         creatureView.innerHTML = `
         <img src="/images/${creatureData[0]}">
-        <div class="small-left-pad">
+        <div class="small-split-pad">
             <h2 class="breaker-header">${creatureData[1]}</h2>
             <small class="text-coloured">${creatureData[2]}</small>
             ${creatureData[3]}
