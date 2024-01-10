@@ -60,7 +60,8 @@ h1, h2, h3 {
 .disabled {
     opacity: 0.4;
 }
-.small-left-pad {
+.small-split-pad {
+    padding-top: 0;
     padding-left: 8px;
     box-sizing: border-box;
 }
@@ -96,7 +97,11 @@ h1, h2, h3 {
 @media screen and (max-width: 499px) {
     .split.split.split.split > *{
         float: none;
-        max-width: 100%;
+        width: 100%;
+    }
+    .small-split-pad.small-split-pad {
+        padding-top: 8px;
+        padding-left: 0;
     }
 }
 
