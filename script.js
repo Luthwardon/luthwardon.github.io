@@ -3,7 +3,7 @@
 let nav_text = `
 <nav class="nav-top">
     <a href="overview.html" title="Back to the home page."><h3>Luthwardron Wiki</h3></a>
-    <a class="disabled" href="" title="Join the Luthwardron Discord!"><i class="fa-brands fa-discord"></i></a>
+    <a href="https://discord.gg/nu4VW6Srdn" title="Join the Luthwardron Discord!"><i class="fa-brands fa-discord"></i></a>
     <a class="disabled" href="" title="View an interactive map of the plot.">・Map</a>
     <a href="hall_of_contributions.html" title="Thank you to those who helped create the plot!">・Hall of Contributions</a>
     <a href="javascript:void(0);" onclick="toggleNav()" class="dropdown">
